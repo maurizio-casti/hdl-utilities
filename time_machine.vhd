@@ -47,7 +47,7 @@ entity time_machine is
     );
   port (
     -- Clock in port
-    CLK_i                   : in  std_logic;   -- Input clock @ 50 MHz,
+    CLK_i                   : in  std_logic;   -- Input clock
     CLEAR_i                 : in  std_logic;   -- Asynchronous active low reset
   
     -- Output reset
