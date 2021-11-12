@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="sim_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="sim_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="66328075000fs"></ZoomEndTime>
+      <Cursor1Time time="1000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="292"></NameColumnWidth>
+      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="81" />
+   <wvobject fp_name="/sim_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/clear" type="logic">
+      <obj_property name="ElementShortName">clear</obj_property>
+      <obj_property name="ObjectShortName">clear</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider16">
+      <obj_property name="label">UUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/CLK_i" type="logic">
+      <obj_property name="ElementShortName">CLK_i</obj_property>
+      <obj_property name="ObjectShortName">CLK_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/MCM_LOCKED_i" type="logic">
+      <obj_property name="ElementShortName">MCM_LOCKED_i</obj_property>
+      <obj_property name="ObjectShortName">MCM_LOCKED_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/CLR_i" type="logic">
+      <obj_property name="ElementShortName">CLR_i</obj_property>
+      <obj_property name="ObjectShortName">CLR_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/ARST_o" type="logic">
+      <obj_property name="ElementShortName">ARST_o</obj_property>
+      <obj_property name="ObjectShortName">ARST_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/ARST_N_o" type="logic">
+      <obj_property name="ElementShortName">ARST_N_o</obj_property>
+      <obj_property name="ObjectShortName">ARST_N_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/ARST_LONG_o" type="logic">
+      <obj_property name="ElementShortName">ARST_LONG_o</obj_property>
+      <obj_property name="ObjectShortName">ARST_LONG_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/ARST_LONG_N_o" type="logic">
+      <obj_property name="ElementShortName">ARST_LONG_N_o</obj_property>
+      <obj_property name="ObjectShortName">ARST_LONG_N_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/ARST_ULONG_o" type="logic">
+      <obj_property name="ElementShortName">ARST_ULONG_o</obj_property>
+      <obj_property name="ObjectShortName">ARST_ULONG_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/ARST_ULONG_N_o" type="logic">
+      <obj_property name="ElementShortName">ARST_ULONG_N_o</obj_property>
+      <obj_property name="ObjectShortName">ARST_ULONG_N_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN200NS_o" type="logic">
+      <obj_property name="ElementShortName">EN200NS_o</obj_property>
+      <obj_property name="ObjectShortName">EN200NS_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN1US_o" type="logic">
+      <obj_property name="ElementShortName">EN1US_o</obj_property>
+      <obj_property name="ObjectShortName">EN1US_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN10US_o" type="logic">
+      <obj_property name="ElementShortName">EN10US_o</obj_property>
+      <obj_property name="ObjectShortName">EN10US_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN100US_o" type="logic">
+      <obj_property name="ElementShortName">EN100US_o</obj_property>
+      <obj_property name="ObjectShortName">EN100US_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN1MS_o" type="logic">
+      <obj_property name="ElementShortName">EN1MS_o</obj_property>
+      <obj_property name="ObjectShortName">EN1MS_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN10MS_o" type="logic">
+      <obj_property name="ElementShortName">EN10MS_o</obj_property>
+      <obj_property name="ObjectShortName">EN10MS_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN100MS_o" type="logic">
+      <obj_property name="ElementShortName">EN100MS_o</obj_property>
+      <obj_property name="ObjectShortName">EN100MS_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN1S_o" type="logic">
+      <obj_property name="ElementShortName">EN1S_o</obj_property>
+      <obj_property name="ObjectShortName">EN1S_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/clear" type="logic">
+      <obj_property name="ElementShortName">clear</obj_property>
+      <obj_property name="ObjectShortName">clear</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/pp_arst" type="logic">
+      <obj_property name="ElementShortName">pp_arst</obj_property>
+      <obj_property name="ObjectShortName">pp_arst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/p_arst" type="logic">
+      <obj_property name="ElementShortName">p_arst</obj_property>
+      <obj_property name="ObjectShortName">p_arst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/arst" type="logic">
+      <obj_property name="ElementShortName">arst</obj_property>
+      <obj_property name="ObjectShortName">arst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/pp_arst_n" type="logic">
+      <obj_property name="ElementShortName">pp_arst_n</obj_property>
+      <obj_property name="ObjectShortName">pp_arst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/p_arst_n" type="logic">
+      <obj_property name="ElementShortName">p_arst_n</obj_property>
+      <obj_property name="ObjectShortName">p_arst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/arst_n" type="logic">
+      <obj_property name="ElementShortName">arst_n</obj_property>
+      <obj_property name="ObjectShortName">arst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/long_arst_cnt" type="array">
+      <obj_property name="ElementShortName">long_arst_cnt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">long_arst_cnt[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/long_arst" type="logic">
+      <obj_property name="ElementShortName">long_arst</obj_property>
+      <obj_property name="ObjectShortName">long_arst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/long_arst_n" type="logic">
+      <obj_property name="ElementShortName">long_arst_n</obj_property>
+      <obj_property name="ObjectShortName">long_arst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/ulong_arst_cnt" type="array">
+      <obj_property name="ElementShortName">ulong_arst_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ulong_arst_cnt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/ulong_arst" type="logic">
+      <obj_property name="ElementShortName">ulong_arst</obj_property>
+      <obj_property name="ObjectShortName">ulong_arst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/ulong_arst_n" type="logic">
+      <obj_property name="ElementShortName">ulong_arst_n</obj_property>
+      <obj_property name="ObjectShortName">ulong_arst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en200ns_cnt" type="array">
+      <obj_property name="ElementShortName">en200ns_cnt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">en200ns_cnt[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en200ns_cnt_tc" type="logic">
+      <obj_property name="ElementShortName">en200ns_cnt_tc</obj_property>
+      <obj_property name="ObjectShortName">en200ns_cnt_tc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/p_en200ns" type="logic">
+      <obj_property name="ElementShortName">p_en200ns</obj_property>
+      <obj_property name="ObjectShortName">p_en200ns</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en200ns" type="logic">
+      <obj_property name="ElementShortName">en200ns</obj_property>
+      <obj_property name="ObjectShortName">en200ns</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en1us_cnt" type="array">
+      <obj_property name="ElementShortName">en1us_cnt[2:0]</obj_property>
+      <obj_property name="ObjectShortName">en1us_cnt[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en1us_cnt_tc" type="logic">
+      <obj_property name="ElementShortName">en1us_cnt_tc</obj_property>
+      <obj_property name="ObjectShortName">en1us_cnt_tc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/p_en1us" type="logic">
+      <obj_property name="ElementShortName">p_en1us</obj_property>
+      <obj_property name="ObjectShortName">p_en1us</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en1us" type="logic">
+      <obj_property name="ElementShortName">en1us</obj_property>
+      <obj_property name="ObjectShortName">en1us</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en10us_cnt" type="array">
+      <obj_property name="ElementShortName">en10us_cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">en10us_cnt[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en10us_cnt_tc" type="logic">
+      <obj_property name="ElementShortName">en10us_cnt_tc</obj_property>
+      <obj_property name="ObjectShortName">en10us_cnt_tc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/p_en10us" type="logic">
+      <obj_property name="ElementShortName">p_en10us</obj_property>
+      <obj_property name="ObjectShortName">p_en10us</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en10us" type="logic">
+      <obj_property name="ElementShortName">en10us</obj_property>
+      <obj_property name="ObjectShortName">en10us</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en100us_cnt" type="array">
+      <obj_property name="ElementShortName">en100us_cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">en100us_cnt[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en100us_cnt_tc" type="logic">
+      <obj_property name="ElementShortName">en100us_cnt_tc</obj_property>
+      <obj_property name="ObjectShortName">en100us_cnt_tc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/p_en100us" type="logic">
+      <obj_property name="ElementShortName">p_en100us</obj_property>
+      <obj_property name="ObjectShortName">p_en100us</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en100us" type="logic">
+      <obj_property name="ElementShortName">en100us</obj_property>
+      <obj_property name="ObjectShortName">en100us</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en1ms_cnt" type="array">
+      <obj_property name="ElementShortName">en1ms_cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">en1ms_cnt[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en1ms_cnt_tc" type="logic">
+      <obj_property name="ElementShortName">en1ms_cnt_tc</obj_property>
+      <obj_property name="ObjectShortName">en1ms_cnt_tc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/p_en1ms" type="logic">
+      <obj_property name="ElementShortName">p_en1ms</obj_property>
+      <obj_property name="ObjectShortName">p_en1ms</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en1ms" type="logic">
+      <obj_property name="ElementShortName">en1ms</obj_property>
+      <obj_property name="ObjectShortName">en1ms</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en10ms_cnt" type="array">
+      <obj_property name="ElementShortName">en10ms_cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">en10ms_cnt[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en10ms_cnt_tc" type="logic">
+      <obj_property name="ElementShortName">en10ms_cnt_tc</obj_property>
+      <obj_property name="ObjectShortName">en10ms_cnt_tc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/p_en10ms" type="logic">
+      <obj_property name="ElementShortName">p_en10ms</obj_property>
+      <obj_property name="ObjectShortName">p_en10ms</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en10ms" type="logic">
+      <obj_property name="ElementShortName">en10ms</obj_property>
+      <obj_property name="ObjectShortName">en10ms</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en100ms_cnt" type="array">
+      <obj_property name="ElementShortName">en100ms_cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">en100ms_cnt[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en100ms_cnt_tc" type="logic">
+      <obj_property name="ElementShortName">en100ms_cnt_tc</obj_property>
+      <obj_property name="ObjectShortName">en100ms_cnt_tc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/p_en100ms" type="logic">
+      <obj_property name="ElementShortName">p_en100ms</obj_property>
+      <obj_property name="ObjectShortName">p_en100ms</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en100ms" type="logic">
+      <obj_property name="ElementShortName">en100ms</obj_property>
+      <obj_property name="ObjectShortName">en100ms</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en1s_cnt" type="array">
+      <obj_property name="ElementShortName">en1s_cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">en1s_cnt[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en1s_cnt_tc" type="logic">
+      <obj_property name="ElementShortName">en1s_cnt_tc</obj_property>
+      <obj_property name="ObjectShortName">en1s_cnt_tc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/p_en1s" type="logic">
+      <obj_property name="ElementShortName">p_en1s</obj_property>
+      <obj_property name="ObjectShortName">p_en1s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/en1s" type="logic">
+      <obj_property name="ElementShortName">en1s</obj_property>
+      <obj_property name="ObjectShortName">en1s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/CLK_PERIOD_NS_g" type="other">
+      <obj_property name="ElementShortName">CLK_PERIOD_NS_g</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD_NS_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/CLR_POLARITY_g" type="array">
+      <obj_property name="ElementShortName">CLR_POLARITY_g[1:4]</obj_property>
+      <obj_property name="ObjectShortName">CLR_POLARITY_g[1:4]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/ARST_LONG_PERSISTANCE_g" type="other">
+      <obj_property name="ElementShortName">ARST_LONG_PERSISTANCE_g</obj_property>
+      <obj_property name="ObjectShortName">ARST_LONG_PERSISTANCE_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/ARST_ULONG_DURATION_MS_g" type="other">
+      <obj_property name="ElementShortName">ARST_ULONG_DURATION_MS_g</obj_property>
+      <obj_property name="ObjectShortName">ARST_ULONG_DURATION_MS_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/HAS_POR_g" type="other">
+      <obj_property name="ElementShortName">HAS_POR_g</obj_property>
+      <obj_property name="ObjectShortName">HAS_POR_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/SIM_TIME_COMPRESSION_g" type="other">
+      <obj_property name="ElementShortName">SIM_TIME_COMPRESSION_g</obj_property>
+      <obj_property name="ObjectShortName">SIM_TIME_COMPRESSION_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/CLR_POL_c" type="logic">
+      <obj_property name="ElementShortName">CLR_POL_c</obj_property>
+      <obj_property name="ObjectShortName">CLR_POL_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN200NS_CONSTANT_c" type="other">
+      <obj_property name="ElementShortName">EN200NS_CONSTANT_c</obj_property>
+      <obj_property name="ObjectShortName">EN200NS_CONSTANT_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN1US_CONSTANT_c" type="other">
+      <obj_property name="ElementShortName">EN1US_CONSTANT_c</obj_property>
+      <obj_property name="ObjectShortName">EN1US_CONSTANT_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN10US_CONSTANT_c" type="other">
+      <obj_property name="ElementShortName">EN10US_CONSTANT_c</obj_property>
+      <obj_property name="ObjectShortName">EN10US_CONSTANT_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN100US_CONSTANT_c" type="other">
+      <obj_property name="ElementShortName">EN100US_CONSTANT_c</obj_property>
+      <obj_property name="ObjectShortName">EN100US_CONSTANT_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN1MS_CONSTANT_c" type="other">
+      <obj_property name="ElementShortName">EN1MS_CONSTANT_c</obj_property>
+      <obj_property name="ObjectShortName">EN1MS_CONSTANT_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN10MS_CONSTANT_c" type="other">
+      <obj_property name="ElementShortName">EN10MS_CONSTANT_c</obj_property>
+      <obj_property name="ObjectShortName">EN10MS_CONSTANT_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN100MS_CONSTANT_c" type="other">
+      <obj_property name="ElementShortName">EN100MS_CONSTANT_c</obj_property>
+      <obj_property name="ObjectShortName">EN100MS_CONSTANT_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_tb/TIME_MACHINE_m/EN1S_CONSTANT_c" type="other">
+      <obj_property name="ElementShortName">EN1S_CONSTANT_c</obj_property>
+      <obj_property name="ObjectShortName">EN1S_CONSTANT_c</obj_property>
+   </wvobject>
+</wave_config>
