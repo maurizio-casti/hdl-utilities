@@ -64,7 +64,7 @@ entity time_machine is
     ARST_ULONG_N_o            : out std_logic;	      -- Active low asyncronous assertion, syncronous deassertion Ultra-Long Duration Reset output 
       
     -- Output ports for generated clock enables
-    EN200NS_o                 : out std_logic;	      -- Clock enable every 200 ns
+    EN100NS_o                 : out std_logic;	      -- Clock enable every 200 ns
     EN1US_o                   : out std_logic;	      -- Clock enable every 1 us
     EN10US_o                  : out std_logic;	      -- Clock enable every 10 us
     EN100US_o                 : out std_logic;	      -- Clock enable every 100 us
@@ -135,12 +135,12 @@ signal ulong_arst_n    : std_logic := not has_por(HAS_POR_g);
 -- -------------------------------------------------------------------------------------------------------------------------
 -- Enable generation Counters
 
-signal en200ns_cnt    : std_logic_vector(4 downto 0);  
-signal en200ns_cnt_tc : std_logic;  
-signal p_en200ns      : std_logic;  
-signal en200ns        : std_logic;	
+signal en100ns_cnt    : std_logic_vector(3 downto 0);  
+signal en100ns_cnt_tc : std_logic;  
+signal p_en100ns      : std_logic;  
+signal en100ns        : std_logic;	
 
-signal en1us_cnt      : std_logic_vector(2 downto 0);  
+signal en1us_cnt      : std_logic_vector(3 downto 0);  
 signal en1us_cnt_tc   : std_logic;  
 signal p_en1us        : std_logic;  
 signal en1us          : std_logic;	
@@ -177,13 +177,13 @@ signal en1s           : std_logic;
 
 -- -------------------------------------------------------------------------------------------------------------------------
 -- Calculation of constants used in generation of Enables
-function scale_value (a : natural; b : boolean; p : real) return natural is
-constant BASE_COUNT_c : natural := natural ((200.0/p)-1.0);
+function scale_10_value (a : natural; b : boolean; s : real; p : real) return natural is
+constant BASE_COUNT_c : natural := natural ((s/p)-1.0);
 variable temp : natural;
 begin
   case a is                                                               --                                                                    FALSE      TRUE
-    when 0 => if b then temp := 7; else temp := BASE_COUNT_c;  end if;    return temp;  --   en200ns_period = CLK_i_period * (temp + 1)    -->    200 ns     80 ns
-    when 1 => if b then temp := 4; else temp :=            4;  end if;    return temp;  --   en1us_period   = en200ns_period * (temp + 1)  -->      1 us    400 ns
+    when 0 => if b then temp := 7; else temp := BASE_COUNT_c;  end if;    return temp;  --   en100ns_period = CLK_i_period * (temp + 1)    -->    100 ns     80 ns
+    when 1 => if b then temp := 4; else temp :=            9;  end if;    return temp;  --   en1us_period   = en100ns_period * (temp + 1)  -->      1 us    400 ns
     when 2 => if b then temp := 1; else temp :=            9;  end if;    return temp;  --   en10us_period  = en1us_period * (temp + 1)    -->     10 us    800 ns
     when 3 => if b then temp := 1; else temp :=            9;  end if;    return temp;  --   en100us_period = en10us_period * (temp + 1)   -->    100 us   1.60 us
     when 4 => if b then temp := 1; else temp :=            9;  end if;    return temp;  --   en1ms_period   = en100us_period * (temp + 1)  -->      1 ms   3.20 us
@@ -194,14 +194,14 @@ begin
   end case;
 end function;
 
-constant EN200NS_CONSTANT_c : natural := scale_value(0, SIM_TIME_COMPRESSION_g, CLK_PERIOD_NS_g);
-constant EN1US_CONSTANT_c   : natural := scale_value(1, SIM_TIME_COMPRESSION_g, CLK_PERIOD_NS_g);
-constant EN10US_CONSTANT_c  : natural := scale_value(2, SIM_TIME_COMPRESSION_g, CLK_PERIOD_NS_g);
-constant EN100US_CONSTANT_c : natural := scale_value(3, SIM_TIME_COMPRESSION_g, CLK_PERIOD_NS_g);
-constant EN1MS_CONSTANT_c   : natural := scale_value(4, SIM_TIME_COMPRESSION_g, CLK_PERIOD_NS_g);
-constant EN10MS_CONSTANT_c  : natural := scale_value(5, SIM_TIME_COMPRESSION_g, CLK_PERIOD_NS_g);
-constant EN100MS_CONSTANT_c : natural := scale_value(6, SIM_TIME_COMPRESSION_g, CLK_PERIOD_NS_g);
-constant EN1S_CONSTANT_c    : natural := scale_value(7, SIM_TIME_COMPRESSION_g, CLK_PERIOD_NS_g);
+constant EN100NS_CONSTANT_c : natural := scale_10_value(0, SIM_TIME_COMPRESSION_g, 100.0, CLK_PERIOD_NS_g);
+constant EN1US_CONSTANT_c   : natural := scale_10_value(1, SIM_TIME_COMPRESSION_g, 100.0, CLK_PERIOD_NS_g);
+constant EN10US_CONSTANT_c  : natural := scale_10_value(2, SIM_TIME_COMPRESSION_g, 100.0, CLK_PERIOD_NS_g);
+constant EN100US_CONSTANT_c : natural := scale_10_value(3, SIM_TIME_COMPRESSION_g, 100.0, CLK_PERIOD_NS_g);
+constant EN1MS_CONSTANT_c   : natural := scale_10_value(4, SIM_TIME_COMPRESSION_g, 100.0, CLK_PERIOD_NS_g);
+constant EN10MS_CONSTANT_c  : natural := scale_10_value(5, SIM_TIME_COMPRESSION_g, 100.0, CLK_PERIOD_NS_g);
+constant EN100MS_CONSTANT_c : natural := scale_10_value(6, SIM_TIME_COMPRESSION_g, 100.0, CLK_PERIOD_NS_g);
+constant EN1S_CONSTANT_c    : natural := scale_10_value(7, SIM_TIME_COMPRESSION_g, 100.0, CLK_PERIOD_NS_g);
 
 begin
 
@@ -284,29 +284,29 @@ end process;
 
 
 
--- Enable @ 200 ns
-en200ns_cnt_tc <= '1' when (en200ns_cnt = conv_std_logic_vector(EN200NS_CONSTANT_c, en200ns_cnt'length)) else '0'; 
+-- Enable @ 100 ns
+en100ns_cnt_tc <= '1' when (en100ns_cnt = conv_std_logic_vector(EN100NS_CONSTANT_c, en100ns_cnt'length)) else '0'; 
 process(CLK_i, arst_n)
 begin
   if (arst_n = '0') then
-    en200ns_cnt <= (others => '0');
+    en100ns_cnt <= (others => '0');
   elsif rising_edge(CLK_i) then
-    if (en200ns_cnt_tc = '1') then
-      en200ns_cnt <= (others => '0');  
+    if (en100ns_cnt_tc = '1') then
+      en100ns_cnt <= (others => '0');  
     else 
-      en200ns_cnt <= en200ns_cnt + 1;
+      en100ns_cnt <= en100ns_cnt + 1;
     end if;
   end if;
 end process; 
 
-p_en200ns <= en200ns_cnt_tc;
+p_en100ns <= en100ns_cnt_tc;
 
 process(CLK_i, arst_n)
 begin
   if (arst_n = '0') then
-    en200ns <= '0';
+    en100ns <= '0';
   elsif rising_edge(CLK_i) then
-    en200ns <= p_en200ns;
+    en100ns <= p_en100ns;
   end if;
 end process;  
 
@@ -319,7 +319,7 @@ begin
   if (arst_n = '0') then
     en1us_cnt <= (others => '0');
   elsif rising_edge(CLK_i) then
-    if (p_en200ns = '1') then
+    if (p_en100ns = '1') then
       if (en1us_cnt_tc = '1') then 
         en1us_cnt <= (others => '0');  
       else 
@@ -329,7 +329,7 @@ begin
   end if;
 end process; 
 
-p_en1us <= en1us_cnt_tc and p_en200ns;
+p_en1us <= en1us_cnt_tc and p_en100ns;
 
 process(CLK_i, arst_n)
 begin
@@ -527,7 +527,7 @@ ARST_LONG_N_o   <= long_arst_n;
 ARST_ULONG_o    <= ulong_arst;
 ARST_ULONG_N_o  <= ulong_arst_n;
 
-EN200NS_o         <= en200ns;
+EN100NS_o         <= en100ns;
 EN1US_o           <= en1us;
 EN10US_o          <= en10us;
 EN100US_o         <= en100us;
